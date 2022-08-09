@@ -26,10 +26,9 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.utils import formataddr
 from email.mime.application import MIMEApplication
-msg_from = '161983374@qq.com'  # 发送方邮箱
-passwd = 'yybemuygyoojbgeb'  # 填入发送方邮箱的授权码
-#msg_to = 'brianlin091994@gmail.com'  # 收件人邮箱
-msg_to = '2557833850@qq.com'
+msg_from = '161983XXXXX@qq.com'  # 发送方邮箱
+passwd = 'XXXXXXXX'  # 填入发送方邮箱的授权码
+msg_to = 'brianlin091994@gmail.com'  # 收件人邮箱
 subject = "闲鱼发货(测试)"  # 主题
 class SendEmails():
     def Send(self, content):
@@ -38,7 +37,7 @@ class SendEmails():
         msg['From'] = msg_from
         msg['To'] = msg_to
         try:
-            s = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 邮件服务器及端口号
+            s = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 邮件服务器及端口号,端口号也要修改
             s.login(msg_from, passwd)
             s.sendmail(msg_from, msg_to, msg.as_string())
             print("发送成功")
@@ -75,7 +74,7 @@ class SendEmails():
                 msg.attach(xlsxpart)
 
             try:
-                s = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 邮件服务器及端口号
+                s = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 邮件服务器及端口号,端口号也要修改
                 s.login(msg_from, passwd)
                 s.sendmail(msg_from, msg_to, msg.as_string())
                 print("发送成功")
