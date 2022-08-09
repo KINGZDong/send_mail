@@ -10,7 +10,7 @@
 #
 #                   @File Name：Send_email.py                           #
 #
-#                   @Programmer：Wangzhidong                   #
+#                   @Programmer：wzdrsy                   #
 #
 #                   @Start Date：2021/9/27 0027 14:21          #
 #
@@ -28,8 +28,8 @@ from email.utils import formataddr
 from email.mime.application import MIMEApplication
 msg_from = '161983374@qq.com'  # 发送方邮箱
 passwd = 'yybemuygyoojbgeb'  # 填入发送方邮箱的授权码
-msg_to = 'brianlin091994@gmail.com'  # 收件人邮箱
-# msg_to = '2557833850@qq.com'
+#msg_to = 'brianlin091994@gmail.com'  # 收件人邮箱
+msg_to = '2557833850@qq.com'
 subject = "闲鱼发货(测试)"  # 主题
 class SendEmails():
     def Send(self, content):
